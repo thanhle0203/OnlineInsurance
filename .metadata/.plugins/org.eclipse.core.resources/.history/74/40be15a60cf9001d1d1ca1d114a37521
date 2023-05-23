@@ -1,0 +1,46 @@
+$(document).ready(function() {
+  // Listen for form submission
+  $("#documentForm").on("submit", function(e) {
+    e.preventDefault(); // Prevent default form submission
+
+    // Get the form data and convert it to JSON
+    var formData = $(this).serializeArray();
+    var jsonData = {};
+    $.each(formData, function(index, field) {
+      jsonData[field.name] = field.value;
+    });
+    
+    // Create the address object and add it to the insured object
+    var addressData = {
+      street: jsonData.street,
+      city: jsonData.city,
+      state: jsonData.state,
+      zipCode: jsonData.zipCode
+    };
+    jsonData.address = addressData;
+    
+    // Get the file input element
+    var fileInput = $("#driverLicense")[0];
+
+    // Add the file to the FormData object
+    formData.append("driverLicense", fileInput.files[0]);
+
+    // Send the data to the server
+    $.ajax({
+      type: "POST",
+      url: "http://localhost:8383/api/insured/submitDocument",
+      contentType: "application/json",
+      data: JSON.stringify(jsonData),
+      success: function(response) {
+        // Handle the success response
+        console.log("Document submitted successfully:", response);
+        // You can update the UI or perform any other necessary actions here
+      },
+      error: function(xhr, status, error) {
+        // Handle the error response
+        console.error("Error submitting document:", error);
+        // You can display an error message or perform any other necessary actions here
+      }
+    });
+  });
+});

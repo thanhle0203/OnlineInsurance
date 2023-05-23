@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.thanhle.repository.InsuredRepository"/>
+    <fullyQualifiedTypeName name="com.thanhle.service.InsuredService"/>
+    <fullyQualifiedTypeName name="com.thanhle.domain.Insured"/>
+    <fullyQualifiedTypeName name="com.thanhle.repository.AddressRepository"/>
+    <fullyQualifiedTypeName name="com.thanhle.domain.Address"/>
+    <fullyQualifiedTypeName name="org.springframework.web.multipart.MultipartFile"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="org.springframework.web.servlet.config.annotation.EnableWebMvc"/>
+</qualifiedTypeNameHistroy>

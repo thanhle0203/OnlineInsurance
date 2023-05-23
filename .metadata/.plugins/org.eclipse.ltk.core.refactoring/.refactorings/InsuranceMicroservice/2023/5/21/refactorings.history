@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;InsuranceMicroservice/src/main/resources/static/js/submitDocument.jsp&apos; to &apos;submitDocument.js&apos;" description="Rename resource &apos;submitDocument.jsp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/resources/static/js/submitDocument.jsp" name="submitDocument.js" stamp="1684788913593" updateReferences="true"/>
+</session>
